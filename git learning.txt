@@ -4,4 +4,11 @@ any folder which dont need to track , any folder or file which u dont want to ad
 
 git status ---to track the files which are changed, unchanged to add to the github
 git config --global =>to  set usename and email for local system
-git commit -m "message must be descriptive"
+git commit -m "message must be descriptive" //it will also add new file if we directly do commit without doing add
+git add do only once whenever new file or folder  is added 
+
+git commit -amend  //to modify message 
+
+git remote add origin https://github.com/anjali-sharma-29/BirdApplicationDemo.git
+git push -u origin master
+origin=>specify url where to store the files
