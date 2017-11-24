@@ -6,3 +6,5 @@ git status ---to track the files which are changed, unchanged to add to the gith
 git config --global =>to  set usename and email for local system
 git commit -m "message must be descriptive"
 git add do only once whenever new file or folder  is added 
+git remote add origin https://github.com/anjali-sharma-29/BirdApplicationDemo.git
+git push -u origin master
