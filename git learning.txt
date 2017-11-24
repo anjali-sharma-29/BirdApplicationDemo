@@ -13,3 +13,4 @@ git remote add origin https://github.com/anjali-sharma-29/BirdApplicationDemo.gi
 git push -u origin master
 origin=>specify url where to store the files
 git origin
+git clone // to clone git 
