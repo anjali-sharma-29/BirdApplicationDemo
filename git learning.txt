@@ -12,3 +12,4 @@ git commit -amend  //to modify message
 git remote add origin https://github.com/anjali-sharma-29/BirdApplicationDemo.git
 git push -u origin master
 origin=>specify url where to store the files
+git origin
