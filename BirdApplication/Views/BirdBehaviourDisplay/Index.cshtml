@@ -1,0 +1,53 @@
+﻿@using BirdApplication.Models;
+@model BirdApplication.Models.BirdModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "BirdBehaviourDisplay"))
+{
+    <br>
+    @Html.Label("BirdNameLabel", "Bird Name:", htmlAttributes: new { @class = "control-label col-md-2" })
+    @Html.TextBoxFor(model=>model.BirdName)
+    <br />
+    @Html.Label("BehaviourList", "List of Behaviours", htmlAttributes: new { @class = "control-label col-md-2" })<br />
+    <font color="red">@TempData["BirdNameEmpty"]</font><br>
+    @Html.ListBoxFor(model=>model.BirdBehaviourList,new MultiSelectList(new[] { "Fly", "Jump","Swim","Walk" }), htmlAttributes: new { @class = "list-group list-group-item" })
+    <font color="red">@TempData["EmptyBehaviour"]</font>
+    <font color="blue">@TempData["BirdNameAdded"]</font>
+    <br><input type="submit" name="submit" value="AddBird">
+    <hr>
+    if (Session!= null)
+    {
+        <tr><td><b>Added Bird and</b></td><td><b> behaviours</b></td></tr><br>
+        foreach (string bird in Session)
+        {
+            if (bird != "" && bird!=null)
+            {
+                <tr> <b style="color:darkmagenta">@bird :</b>
+                @foreach (var behaviour in (List<string>)Session[bird])
+                {
+                    <td>
+                        @behaviour
+                    </td>
+                }
+                </tr><br>
+            }
+        }
+    }
+    <hr>
+    @Html.Label("BirdNameSearch", "Bird Name to be search:", htmlAttributes: new { @class = "control-label col-md-2" })
+    @Html.TextBox("birdSearch")
+    <br><font color="red">@ViewBag.SearchBird</font><br>
+    <input type="submit" name="submit" value="Search">
+}
+<hr>
+@if (@ViewBag.BirdBehaviour != null)
+{
+    foreach (string behaviour in @ViewBag.BirdBehaviour)
+    {
+        <td>@ViewBag.BirdName can </td>
+        <td>@behaviour</td><br>
+    }
+}
