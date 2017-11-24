@@ -1,0 +1,8 @@
+git init
+
+any folder which dont need to track , any folder or file which u dont want to add in git put file path in .gitignore file
+
+git status ---to track the files which are changed, unchanged to add to the github
+git config --global =>to  set usename and email for local system
+git commit -m "message must be descriptive"
+git add do only once whenever new file or folder  is added 
