@@ -1,4 +1,4 @@
-git init
+git init =>create repo on git
 
 any folder which dont need to track , any folder or file which u dont want to add in git put file path in .gitignore file
 
@@ -10,7 +10,18 @@ git add do only once whenever new file or folder  is added
 git commit -amend  //to modify message 
 
 git remote add origin https://github.com/anjali-sharma-29/BirdApplicationDemo.git
-git push -u origin master
+git push -u origin master//-u upstream set
 origin=>specify url where to store the files
+<<<<<<< HEAD
 git origin
 git clone // to clone git 
+=======
+1)git merge
+2)git rebase --merge changes of other user
+3)git fetch
+4)git cherrypic
+5)git stash
+6)git squash
+7)git clone 
+ git clone
+>>>>>>> 2312e89e5d15b2eb7db0582d5459d9995be10689
